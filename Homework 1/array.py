@@ -37,6 +37,7 @@ class Array:
         self._items[index] = new_item
         print(self._items)
 
+
     def get_logical_size(self):
         temp = []
         for val in self._items:
@@ -44,6 +45,7 @@ class Array:
                 temp.append(val)
         self.logical_size = temp
         return len(self.logical_size)
+
 
     def __eq__(self, other):
         if type(self) is not type(other):

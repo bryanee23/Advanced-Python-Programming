@@ -38,6 +38,8 @@ def problem_1_script():
   print("Get_local_func: {}, should equal 4".format(a.get_logical_size()))
   print("Length of logical_size: {}, should equal 4".format(len(a.logical_size)))
 
+
+
 def problem_2_script():
   print("Answer to prompt #2")
   DEFAULT_CAPACITY = 3
@@ -53,9 +55,6 @@ def problem_2_script():
   # a[DEFAULT_CAPACITY + 1] = "book" # index out of range
   # a[DEFAULT_CAPACITY - 1] = None # invalid location of None
 
-
-# problem_1_script()
-# problem_2_script()
 
 
 def problem_3_script():
@@ -90,7 +89,6 @@ def problem_3_script():
 
   e = list([1, 'socks'])
 
-
   # Overloading equals}
   print('Is {} equal to {}? Answer: {}'.format(a, b, a == b)) # Equals True
   print('Is {} or {} equal to {}? Answer: {}'.format(a, b, c, a == c, b == c)) # Equals False
@@ -98,4 +96,10 @@ def problem_3_script():
   print('Is {} equal to {}? Answer: {}'.format(type(a), type(e), a == e)) # Equals False
 
 
+
+#################################
+###### Run scripts
+#################################
+problem_1_script()
+problem_2_script()
 problem_3_script()
