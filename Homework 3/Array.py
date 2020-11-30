@@ -28,7 +28,7 @@ class Array:
     def __setitem__ (self, index, new_item):
         """ set the internal list's index to 'new_item' """
         if new_item == None:
-            if self._items[index -1] == None and index >= (len(self._items) - 1):
+            if self._items[index -1] == None and index >= (len(self._items)):
                 raise IndexError("Invalid placement, None types only at end")
 
         if index > (len(self._items) - 1) or index < 0:

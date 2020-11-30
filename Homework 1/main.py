@@ -66,40 +66,41 @@ def problem_3_script():
   a = Array(DEFAULT_CAPACITY)
   a[DEFAULT_CAPACITY - 2] = 1
   a[DEFAULT_CAPACITY - 1] = 'socks'
-  print("Array A - get_local_func: {}, should equal 2\n".format(a.get_logical_size()))
+  # print("Array A - get_local_func: {}, should equal 2\n".format(a.get_logical_size()))
 
 
   # build array B
   b = Array(DEFAULT_CAPACITY)
   b[DEFAULT_CAPACITY - 2] = 1
   b[DEFAULT_CAPACITY - 1] = 'socks'
-  print("Array B - get_local_func: {}, should equal 2\n".format(b.get_logical_size()))
+  # print("Array B - get_local_func: {}, should equal 2\n".format(b.get_logical_size()))
 
   # build array C
   c = Array(DEFAULT_CAPACITY + 1)
   c[DEFAULT_CAPACITY - 2] = 9999
   c[DEFAULT_CAPACITY - 1] = 'gloves'
   c[DEFAULT_CAPACITY - 0] = 'mittens'
-  print("Array C - get_local_func: {}, should equal 3\n".format(c.get_logical_size()))
+  # print("Array C - get_local_func: {}, should equal 3\n".format(c.get_logical_size()))
 
   # build array D
   d = Array(DEFAULT_CAPACITY)
   d[DEFAULT_CAPACITY - 2] = 1 # [100, None]
-  print("Array D - get_local_func: {}, should equal 2\n".format(d.get_logical_size()))
+  # print("Array D - get_local_func: {}, should equal 2\n".format(d.get_logical_size()))
 
-  e = list([1, 'socks'])
+  e = list()
 
   # Overloading equals}
-  print('Is {} equal to {}? Answer: {}'.format(a, b, a == b)) # Equals True
-  print('Is {} or {} equal to {}? Answer: {}'.format(a, b, c, a == c, b == c)) # Equals False
-  print('Is {} equal to {}? Answer: {}'.format(b, d, b == d)) # Equals False
-  print('Is {} equal to {}? Answer: {}'.format(type(a), type(e), a == e)) # Equals False
+  print(a ==e)
+  print('Is {} equal to {}? Answer: {}'.format(a, e, a == e)) # Equals True
+  # print('Is {} or {} equal to {}? Answer: {}'.format(a, b, c, a = c, b == c)) # Equals False
+  # print('Is {} equal to {}? Answer: {}'.format(b, d, b == d)) # Equals False
+  # print('Is {} equal to {}? Answer: {}'.format(type(a), type(e), a == e)) # Equals False
 
 
 
 #################################
 ###### Run scripts
 #################################
-problem_1_script()
-problem_2_script()
+# problem_1_script()
+# problem_2_script()
 problem_3_script()

@@ -19,6 +19,7 @@ class LinkedSortedSet(LinkedSet):
         trailer = None
 
         while probe.next is not None:
+  
           if item > probe.data:
             if trailer is not None:
               trailer.next = Node(item, self._items)
@@ -31,10 +32,9 @@ class LinkedSortedSet(LinkedSet):
               self._items = trailer
               self._size += 1
               break
+
           trailer = probe
           probe = probe.next
-
-
 
         if probe.next == None and item < probe.data:
           trailer = probe
@@ -43,7 +43,7 @@ class LinkedSortedSet(LinkedSet):
           self._size += 1
 
         if probe.next == None and item > probe.data:
-          trailer.next = Node(item, self._items)
-          trailer.next.next = probe
+          probe = Node(item, self._items)
+          self._items = probe
           self._size += 1
 
