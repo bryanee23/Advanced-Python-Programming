@@ -2,10 +2,29 @@ from Array import Array
 from AbstractCollection import AbstractCollection
 
 class ArrayQueue(AbstractCollection):
-  def __init__(self, DEFAULT_CAPACITY=None):
-    self._items = Array(DEFAULT_CAPACITY)
+  DEFAULT_CAPACITY = 4
+  def __init__(self):
+    self._items = Array(self.DEFAULT_CAPACITY)
     self._front = self._rear = self._size = 0
     AbstractCollection.__init__(self)
+
+  def clear(self):
+    """ clear array """
+    self._items = Array(self.DEFAULT_CAPACITY)
+    self._front = self._rear = self._size = 0
+
+
+  def _expand(self):
+    return_array = []
+    for i in self._items:
+      return_array.append(i)
+
+    double_size = self._size * 2
+    for i in range(self._size, double_size):
+      return_array.append(None)
+
+    print("Queue is full, array capacity doubled to {}".format(self._size*2))
+    return return_array
 
   def push(self, item):
     """handles the following conditions:
@@ -13,16 +32,23 @@ class ArrayQueue(AbstractCollection):
       - full array
       - all other options array
     """
+    next_rear = self._rear + 1
+
     if self._size == 0:
       self._items[self._rear] = item
       self._rear += 1
       self._size += 1
 
-    elif self._size == len(self._items):
-      raise IndexError("Queue is full.")
+    elif self._size == self.DEFAULT_CAPACITY:
+      self._items = self._expand()
+
+      self._rear = self._size
+      self._items[self._rear] = item
+
+      self._size += 1
+      self._rear += 1
 
     else:
-      next_rear = self._rear + 1
       if next_rear % len(self._items) == 0:
         self._items[self._rear] = item
         self._rear = next_rear % len(self._items)
@@ -57,6 +83,10 @@ class ArrayQueue(AbstractCollection):
       raise IndexError("Queue is empty")
     else:
       return self._items[0]
+
+  def __str__(self):
+      """Returns ta string represenation of self._items"""
+      return "{" + ", ".join(map(str, self._items)) + "}"
 
 
 # for testing only
