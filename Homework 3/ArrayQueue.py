@@ -2,7 +2,8 @@ from Array import Array
 from AbstractCollection import AbstractCollection
 
 class ArrayQueue(AbstractCollection):
-  DEFAULT_CAPACITY = 4
+
+  DEFAULT_CAPACITY = 10
   def __init__(self):
     self._items = Array(self.DEFAULT_CAPACITY)
     self._front = self._rear = self._size = 0
