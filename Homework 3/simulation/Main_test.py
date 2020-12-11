@@ -7,6 +7,20 @@ class Test_Cases_ArraySet(unittest.TestCase):
   Advanced testing is near the title
   """
 
+  def test_sim(self):
+    """
+    Test odds of a plane that needs to land
+    add to queue
+    """
+    clock_tick = random.randrange(1, 7)
+    odds_to_land_arrival = 0.75
+    odds_to_takeoff_arrival = 0.89
+
+    sim = TowerSimulator(clock_tick, odds_to_land_arrival, odds_to_takeoff_arrival)
+    sim.run_simulation()
+    print(" ")
+
+
   def test_takeoff(self):
     """
     Test odds of a plane that needs to takeoff
@@ -72,17 +86,7 @@ class Test_Cases_ArraySet(unittest.TestCase):
         q.append(new_plane)
 
 
-  def test_sim(self):
-    """
-    Test odds of a plane that needs to land
-    add to queue
-    """
-    clock_tick = random.randrange(1, 7)
-    odds_to_land_arrival = 0.75
-    odds_to_takeoff_arrival = 0.89
 
-    sim = TowerSimulator(clock_tick, odds_to_land_arrival, odds_to_takeoff_arrival)
-    sim.run_simulation()
 
 if __name__ == '__main__':
   unittest.main()
