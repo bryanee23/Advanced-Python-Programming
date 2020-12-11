@@ -45,32 +45,34 @@ class Test_Cases_ArraySet(unittest.TestCase):
     Test odds of a plane that needs to land
     add to queue
     """
-    i = random.randrange(1, 7)
-    odds_to_land_arrival = 0.75
-    odds_to_takeoff_arrival = 0.89
+    clock_tick = random.randrange(1, 7)
+    odds_to_land_arrival = 0.45
+    odds_to_takeoff_arrival = 0.5
 
 
     q = []
-    for clock_tick in range(0, i):
+    for i in range(0, clock_tick):
       #there lies a possiblity where a random number adds both a landing and take off to the queu
       random_gen = random.random()
-
-      if  random_gen < odds_to_land_arrival:
-        status = "to_land"
-        new_plane = Plane.generate_Plane(status,i)
-        q.append(new_plane)
-
-      if  random_gen < odds_to_takeoff_arrival:
-        status = "to_takeoff"
-        new_plane = Plane.generate_Plane(status,i)
-        q.append(new_plane)
 
       if  random_gen > odds_to_takeoff_arrival and random_gen > odds_to_land_arrival:
         status = "None"
         new_plane = Plane.generate_Plane(status,i)
         q.append(new_plane)
 
-      self.assertEqual(new_plane.status, "to_land")
+      else:
+        if  random_gen < odds_to_land_arrival:
+          status = "to_land"
+          new_plane = Plane.generate_Plane(status,i)
+          q.append(new_plane)
+
+        if  random_gen < odds_to_takeoff_arrival:
+          status = "to_takeoff"
+          new_plane = Plane.generate_Plane(status,i)
+          q.append(new_plane)
+
+
+    self.assertEqual(new_plane.status, "to_land")
       # self.assertEqual(type(new_plane.arrival_time), int)
       # self.assertEqual(type(new_plane.transaction_time), int)
       # self.assertEqual(type(new_plane.fuel), int)
