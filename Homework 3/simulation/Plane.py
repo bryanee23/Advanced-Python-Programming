@@ -5,12 +5,7 @@ class Plane:
 
    @classmethod
    def generate_Plane(cls, status, arrival_time):
-
-      if status is not None:
-         return Plane(status, arrival_time)
-      else:
-         # Plane did not arrive this clock tick
-         return None
+      return Plane(status, arrival_time)
 
 
    def __init__(self, status, arrival_time):

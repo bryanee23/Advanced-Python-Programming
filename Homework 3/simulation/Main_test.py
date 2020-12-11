@@ -1,5 +1,6 @@
 import unittest, random
 from Plane import Plane
+from TowerSimulator import TowerSimulator
 
 class Test_Cases_ArraySet(unittest.TestCase):
   """
@@ -70,9 +71,18 @@ class Test_Cases_ArraySet(unittest.TestCase):
         new_plane = Plane.generate_Plane(status,i)
         q.append(new_plane)
 
-      self.assertEqual(new_plane.status, "to_land")
-      # self.assertEqual(type(new_plane.arrival_time), int)
-      # self.assertEqual(type(new_plane.transaction_time), int)
-      # self.assertEqual(type(new_plane.fuel), int)
+
+  def test_sim(self):
+    """
+    Test odds of a plane that needs to land
+    add to queue
+    """
+    clock_tick = random.randrange(1, 7)
+    odds_to_land_arrival = 0.75
+    odds_to_takeoff_arrival = 0.89
+
+    sim = TowerSimulator(clock_tick, odds_to_land_arrival, odds_to_takeoff_arrival)
+    sim.run_simulation()
+
 if __name__ == '__main__':
   unittest.main()

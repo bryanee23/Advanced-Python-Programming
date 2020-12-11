@@ -11,7 +11,7 @@ class Tower:
       self._queue = LinkedQueue()
       self._priority_queue = LinkedQueue()
 
-   def add_Plane(self, c):
+   def add_to_Q(self, c):
       self._queue.add(c)
 
    def add_to_PriorityQ(self, c):

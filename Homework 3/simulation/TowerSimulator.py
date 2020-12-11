@@ -13,21 +13,21 @@ class TowerSimulator:
       """ The following loop controls our entire simulation
       Each iteration represents a single clock tick (i.e. a minute) """
       for i in range(self._length):
-         random_gen = random.random()
 
-         if random_gen > odds_to_takeoff_arrival and random_gen > odds_to_land_arrival:
+         random_num = random.random()
+         if random_num > self._odds_to_takeoff_arrival and random_num > self._odds_to_land_arrival:
             pass
 
          else:
-
-            if random_gen < odds_to_land_arrival:
+            if random_num < self._odds_to_land_arrival:
+               status = "to_land"
                new_plane = Plane.generate_Plane(status,i)
-               self._Tower.add_to_PriorityQ(new_Plane)(new_plane)
+               self._Tower.add_to_PriorityQ(new_Plane)
 
-            if random_gen < odds_to_takeoff_arrival:
-            status = "to_takeoff"
-            new_plane = Plane.generate_Plane(status,i)
-            q.append(new_plane)
+            if random_num < self._odds_to_takeoff_arrival:
+               status = "to_takeoff"
+               new_plane = Plane.generate_Plane(status,i)
+               self._Tower.add_to_Q(new_Plane)
 
 
          # See if a new Plane is created this clock tick
