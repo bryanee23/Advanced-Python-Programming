@@ -1,5 +1,5 @@
 from LinkedQueue import LinkedQueue
-from Plane import Plane
+# from Plane import Plane
 
 
 class Tower:
@@ -9,9 +9,13 @@ class Tower:
       self._longest_wait = 0
       self._current_Plane = None
       self._queue = LinkedQueue()
+      self._priority_queue = LinkedQueue()
 
-   def add_Plane(self, c):
+   def add_Plane_to_queue(self, c):
       self._queue.add(c)
+
+   def add_Plane_to_priorityQ(self, c):
+      self._priority_queue.add(c)
 
    def serve_Plane(self, cur_time):
       if self._current_Plane is None:
