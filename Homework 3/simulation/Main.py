@@ -1,6 +1,6 @@
-from Theatersim import TheaterSimulator
+from TowerSimulator import TowerSimulator
 
 length = 55
 odds = float(0.25)
-sim = TheaterSimulator(length, odds)
+sim = TowerSimulator(length, odds)
 sim.run_simulation()

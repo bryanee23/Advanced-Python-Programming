@@ -2,7 +2,7 @@ from Tower import Tower
 from Plane import Plane
 
 
-class TheaterSimulator:
+class TowerSimulator:
    def __init__(self, length, odds_Plane_arrives):
       self._length = length
       self._odds_Plane_arrives = odds_Plane_arrives
