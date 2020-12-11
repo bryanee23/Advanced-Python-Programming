@@ -9,9 +9,13 @@ class Tower:
       self._longest_wait = 0
       self._current_Plane = None
       self._queue = LinkedQueue()
+      self._priority_queue = LinkedQueue()
 
    def add_Plane(self, c):
       self._queue.add(c)
+
+   def add_to_PriorityQ(self, c):
+      self._priority_queue.add(c)
 
    def serve_Plane(self, cur_time):
       if self._current_Plane is None:
