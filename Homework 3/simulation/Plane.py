@@ -34,3 +34,7 @@ class Plane:
    def serve(self):
       """ Serve the Plane for one unit of time. """
       self._transaction_time -= 1
+
+   def minus_fuel(self):
+      """ Serve the Plane for one unit of time. """
+      self._fuel -= 1

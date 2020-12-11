@@ -1,11 +1,32 @@
 import unittest, random
 from Plane import Plane
+from Tower import Tower
 from TowerSimulator import TowerSimulator
 
 class Test_Cases_ArraySet(unittest.TestCase):
   """
   Advanced testing is near the title
   """
+
+  def test_Tower(self):
+    """
+    Test odds of a plane that needs to land
+    add to queue
+    """
+    print('here')
+    tower = Tower()
+    ran_num = random.randrange(3, 7)
+    for i in range(0, ran_num):
+      if (i % 2 ) == 0:
+        new_plane = Plane("Takeoff", i)
+        tower.add_to_Q(new_plane)
+      else:
+        new_plane = Plane("landing", i)
+        tower.add_to_PriorityQ(new_plane)
+
+      tower.serve_plane(i)
+    print(self._Tower)
+    print('here')
 
   def test_sim(self):
     """
@@ -18,7 +39,6 @@ class Test_Cases_ArraySet(unittest.TestCase):
 
     sim = TowerSimulator(clock_tick, odds_to_land_arrival, odds_to_takeoff_arrival)
     sim.run_simulation()
-    print(" ")
 
 
   def test_takeoff(self):
