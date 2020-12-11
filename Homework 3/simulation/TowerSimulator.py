@@ -2,7 +2,6 @@ from Tower import Tower
 from Plane import Plane
 import random
 
-
 class TowerSimulator:
    def __init__(self, length, odds_to_land_arrival, odds_to_takeoff_arrival):
       self._length = length
@@ -17,12 +16,12 @@ class TowerSimulator:
       for i in range(self._length):
 
          if self._rand_num  < self._odds_to_land_arrival:
-            status = "to_land"
+            status = "Landing"
             new_plane = Plane.generate_Plane(status,i)
             self._Tower.add_to_PriorityQ(new_plane)
 
          if self._rand_num  < self._odds_to_takeoff_arrival:
-            status = "to_takeoff"
+            status = "Takeoff"
             new_plane = Plane.generate_Plane(status,i)
             self._Tower.add_to_Q(new_plane)
 

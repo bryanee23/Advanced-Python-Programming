@@ -12,7 +12,8 @@ class Plane:
       """ arrival_time represents which clock-tick this Plane arrived on """
       self._status = status
       self._arrival_time = arrival_time
-      self._transaction_time = random.randint(1, 3)
+      self._transaction_time = random.randint(2, 3)
+      # self._transaction_time = random.randint(1, 3)
       self._fuel = random.randint(5, 15)
 
    @property

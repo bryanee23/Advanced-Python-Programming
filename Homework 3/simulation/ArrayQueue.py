@@ -27,7 +27,7 @@ class ArrayQueue(AbstractCollection):
     print("Queue is full, array capacity doubled to {}".format(self._size*2))
     return return_array
 
-  def push(self, item):
+  def add(self, item):
     """handles the following conditions:
       - empty array
       - full array
