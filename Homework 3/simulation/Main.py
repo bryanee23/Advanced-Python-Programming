@@ -1,7 +1,6 @@
 from TowerSimulator import TowerSimulator
 import random
 
-
 if __name__ == "__main__":
   length = int(input("Enter Number of clock ticks: "))
   landing_odds = float(input("Enter probability of planes arriving to the runway land: "))
