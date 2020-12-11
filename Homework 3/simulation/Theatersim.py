@@ -1,32 +1,32 @@
-from Cashier import Cashier
-from Customer import Customer
+from Tower import Tower
+from Plane import Plane
 
 
 class TheaterSimulator:
-   def __init__(self, length, odds_customer_arrives):
+   def __init__(self, length, odds_Plane_arrives):
       self._length = length
-      self._odds_customer_arrives = odds_customer_arrives
-      self._cashier = Cashier()
-      self._cashier2 = Cashier()
+      self._odds_Plane_arrives = odds_Plane_arrives
+      self._Tower = Tower()
+      self._Tower2 = Tower()
 
    def run_simulation(self):
       """ The following loop controls our entire simulation
       Each iteration represents a single clock tick (i.e. a minute) """
       for i in range(self._length):
 
-         # See if a new customer is created this clock tick
-         new_customer = Customer.generate_customer(self._odds_customer_arrives, i)
+         # See if a new Plane is created this clock tick
+         new_Plane = Plane.generate_Plane(self._odds_Plane_arrives, i)
 
-         # If it is, add it to the Cashier's queue
-         if new_customer is not None:
+         # If it is, add it to the Tower's queue
+         if new_Plane is not None:
             if i % 2 == 0:
-               self._cashier.add_customer(new_customer)
+               self._Tower.add_Plane(new_Plane)
             else:
-               self._cashier2.add_customer(new_customer)
+               self._Tower2.add_Plane(new_Plane)
 
-         # Tell the Cashier to give front Customer one clock tick of help
-         self._cashier.serve_customer(i)
-         self._cashier2.serve_customer(i)
+         # Tell the Tower to give front Plane one clock tick of help
+         self._Tower.serve_Plane(i)
+         self._Tower2.serve_Plane(i)
 
-      print(self._cashier)
-      print(self._cashier2)
+      print(self._Tower)
+      print(self._Tower2)
