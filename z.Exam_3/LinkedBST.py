@@ -1,4 +1,5 @@
 from AbstractCollection import AbstractCollection
+from LinkedQueue import LinkedQueue
 from BinaryNode import BinaryNode
 
 
@@ -9,15 +10,17 @@ class LinkedBST(AbstractCollection):
 		self._root = None
 		AbstractCollection.__init__(self)
 
-	def height(self):
-		""" Returns the current height of the tree """
-		def recurse(node):
-			# Base case
-			if node is None:
-				return 0
-			return 1 + max(recurse(node.left), recurse(node.right))
-		return recurse(self._root)
+# breadth:
+#      Create a queue
+#      Add root to the queue
+#      Loop until queue is empty:
+#           print Node at front of queue
+#           pop Node from queue
+#           add Node’s left and right children to queue
+	def bfs_akabreakfast(self):
 
+
+	# edited code to answer promt 1
 	def find(self, item):
 		visited_nodes = []
 		none_node_visit = []
@@ -51,6 +54,22 @@ class LinkedBST(AbstractCollection):
 
 		return recurse(self._root)
 
+	def height(self):
+		""" Returns the current height of the tree """
+		def recurse(node):
+			# Base case
+			if node is None:
+				return 0
+			return 1 + max(recurse(node.left), recurse(node.right))
+		return recurse(self._root)
+
+	# code to answer promt 2
+	def height_from_node(self):
+		"""
+		calls BinaryNode's height method. similar to linkedBST's height method but further down the pipline
+		"""
+		return BinaryNode.node_height(self._root)
+
 	def inorder(self):
 
 		def recurse(node):
@@ -62,6 +81,7 @@ class LinkedBST(AbstractCollection):
 
 		recurse(self._root)
 
+	# created to provide visual on tree insertion order
 	def preorder(self):
 
 		def recurse(node):
@@ -72,7 +92,6 @@ class LinkedBST(AbstractCollection):
 			recurse(node.right)
 
 		recurse(self._root)
-
 
 	def add(self, item):
 		""" Adds 'item' to the binary search tree """
