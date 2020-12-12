@@ -1,0 +1,153 @@
+bryanevangelista@Bryans-MBP simulation % python Main.py
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 0
+Planes in queues 0
+bryanevangelista@Bryans-MBP simulation % python Main.py
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 0
+Planes in queues 0
+bryanevangelista@Bryans-MBP simulation % python Main.py
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 0
+Planes in queues 0
+bryanevangelista@Bryans-MBP simulation % python Main.py
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 58.20987654320987
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 4715
+Planes Crashed: 0
+Planes served: 80
+Planes in queues 118
+bryanevangelista@Bryans-MBP simulation % python Main.py
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 38.183673469387756
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 1871
+Planes Crashed: 0
+Planes served: 48
+Planes in queues 77
+bryanevangelista@Bryans-MBP simulation % python Main.py
+Queue is full, array capacity doubled to 20
+
+average time spent waiting for take off: 10.619047619047619
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 223
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 20
+Planes in queues 95
+bryanevangelista@Bryans-MBP simulation % python Main.py
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 0
+Planes in queues 0
+bryanevangelista@Bryans-MBP simulation % python Main.py
+Queue is full, array capacity doubled to 20
+
+average time spent waiting for take off: 9.714285714285714
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 204
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 20
+Planes in queues 91
+bryanevangelista@Bryans-MBP simulation % python Main.py
+Queue is full, array capacity doubled to 20
+Queue is full, array capacity doubled to 20
+
+average time spent waiting for take off: 16.842105263157894
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 320
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 18
+Planes in queues 35
+bryanevangelista@Bryans-MBP simulation % python Main.py
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 0
+Planes in queues 0
+bryanevangelista@Bryans-MBP simulation % python Main.py
+Queue is full, array capacity doubled to 20
+Queue is full, array capacity doubled to 20
+
+average time spent waiting for take off: 13.580645161290322
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 421
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 30
+Planes in queues 123
+bryanevangelista@Bryans-MBP simulation % python Main.py
+Queue is full, array capacity doubled to 20
+
+average time spent waiting for take off: 9.952380952380953
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 209
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 20
+Planes in queues 143
+bryanevangelista@Bryans-MBP simulation % python Main.py
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 0.0
+bryanevangelista@Bryans-MBP simulation % python Main.py
+Enter Number of clock ticks: 49
+Enter probability of planes arriving to the runway land: .23
+Enter probability of planes arriving to the runway takeoff .3
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 0.0
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 0
+Planes Crashed: 0
+Planes served: 0
+Planes in queues 0
+bryanevangelista@Bryans-MBP simulation % python Main.py
+Enter Number of clock ticks: 555
+Enter probability of planes arriving to the runway land: .7
+Enter probability of planes arriving to the runway takeoff .7
+Queue is full, array capacity doubled to 20
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 165.68949771689498
+longest time spent waiting for take off: 0
+longest time spent waiting for to land: 36286
+Planes Crashed: 0
+Planes served: 218
+Planes in queues 891
+bryanevangelista@Bryans-MBP simulation % python Main.py
+Enter Number of clock ticks: 7834
+Enter probability of planes arriving to the runway land: .8
+Enter probability of planes arriving to the runway takeoff .4
+Queue is full, array capacity doubled to 20
+
+average time spent waiting for take off: 0.0
+average time spent waiting for to land: 2353.9596184419715
+longest time spent waiting for take off: 0
